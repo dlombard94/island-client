@@ -1,0 +1,43 @@
+<template>
+  <h2 class="ui dividing header"> Islands </h2>
+  <div repeat.for="island of islands">
+
+    <div class="ui segment">
+      <div class="column">
+          <h3 class="ui block header">
+            ${island.name}
+          </h3>
+          <div class="ui horizontal segments">
+            <div class="ui segment">
+              <p><b>Area (m2): </b>${island.area}</p>
+            </div>
+            <div class="ui segment">
+              <p><b>Location: </b>${island.category}</p>
+            </div>
+            <div class="ui segment">
+              <p><b>Added By: </b></p>
+            </div>
+          </div>
+          <div class="ui horizontal segments">
+            <div class="ui segment">
+              <p><b>Longitude: </b>xxxxxx</p>
+            </div>
+            <div class="ui segment">
+              <p><b>Latitude: </b>xxxxx</p>
+            </div>
+          </div>
+          <div class="ui segment">
+            <p><b>Description: </b>${island.description}</p>
+          </div>
+
+      </div>
+      <div class="column">
+      </div>
+    </div>
+  </div>
+</template>
+
+
+
+
+
