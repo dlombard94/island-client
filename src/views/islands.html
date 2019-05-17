@@ -1,52 +1,17 @@
 <template>
   <require from="../resources/elements/island-list"></require>
+  <require from="../resources/elements/island-form"></require>
 
   <div class="ui stackable two column grid">
+
     <div class="column">
-
-      <form submit.trigger="addIsland()" class="ui stacked segment form">
-        <h2 class="ui dividing header"> Add an Island </h2>
-
-        <div class="three fields">
-          <div class="field">
-            <label>Name</label><input value.bind="name">
-          </div>
-          <div class="field">
-            <label>Area (m2)</label><input value.bind="area">
-          </div>
-          <div class="field">
-            <label>Location</label>
-            <select class="ui fluid search dropdown" value.bind="category">
-              <option value="">Location</option>
-              <option value="1">North</option>
-              <option value="1">East</option>
-              <option value="2">West</option>
-              <option value="3">South</option>
-            </select>
-          </div>
-        </div>
-
-        <!--<div class="two fields">-->
-          <!--<div class="field">-->
-            <!--<label>Longitude</label><input placeholder="55.5" value.bind="longitude">-->
-          <!--</div>-->
-          <!--<div class="field">-->
-            <!--<label>Latitude</label><input placeholder="-7.4" value.bind="latitude">-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <div class="one field">
-          <div class="field">
-            <label>Description</label>
-            <textarea placeholder="Describe the island....." rows="7" value.bind="description"></textarea>
-          </div>
-          <button class="ui blue submit button">Add Island</button>
-        </div>
-      </form>
+      <island-form islands.bind="islands"></island-form>
     </div>
+
     <div class="column">
       <island-list islands.bind="islands"></island-list>
     </div>
+
   </div>
 </template>
 
