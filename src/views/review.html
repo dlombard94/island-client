@@ -1,4 +1,6 @@
 <template>
+  <require from="../resources/elements/review-list"></require>
+
   <div class="ui stackable two column grid">
     <div class="column">
       <form submit.trigger="makeReview()" class="ui form stacked segment">
@@ -13,18 +15,7 @@
       </form>
     </div>
     <div class="column">
-      <h3 class="ui dividing header"> Reviews to Date </h3>
-      <table class="ui celled table segment">
-        <thead>
-        <tr>
-          <th>Reviews</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr repeat.for="review of reviewArray">
-          <td> ${review}</td>
-        </tr>
-        </tbody>
-      </table>    </div>
+      <review-list reviews.bind="reviews"></review-list>
+    </div>
   </div>
 </template>

@@ -8,3 +8,8 @@ export interface Island {
   //   latitude: Number;
   // }
 }
+
+// export interface Review {
+//   review: String;
+//
+// }
