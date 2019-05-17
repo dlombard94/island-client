@@ -1,0 +1,30 @@
+<template>
+  <div class="ui stackable two column grid">
+    <div class="column">
+      <form submit.trigger="makeReview()" class="ui form stacked segment">
+        <h3 class='ui dividing header'> Write a Review </h3>
+        <div class="grouped inline fields">
+          <div class="field">
+            <label>Review</label>
+            <textarea placeholder="Review the island....." rows="7" value.bind="review"></textarea>
+          </div>
+        </div>
+        <button class="ui blue submit button">Submit Review</button>
+      </form>
+    </div>
+    <div class="column">
+      <h3 class="ui dividing header"> Reviews to Date </h3>
+      <table class="ui celled table segment">
+        <thead>
+        <tr>
+          <th>Reviews</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr repeat.for="review of reviewArray">
+          <td> ${review}</td>
+        </tr>
+        </tbody>
+      </table>    </div>
+  </div>
+</template>
