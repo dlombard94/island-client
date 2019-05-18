@@ -6,6 +6,14 @@ export class App {
 
   configureRouter(config: RouterConfiguration, router: Router) {
     config.map([
+
+      {
+        route: 'islands',
+        name: 'islands',
+        moduleId: PLATFORM.moduleName('views/islands'),
+        nav: true,
+        title: 'Island'
+      },
       {
         route: ['', 'review'],
         name: 'Review',
@@ -14,12 +22,13 @@ export class App {
         title: 'Review'
       },
       {
-        route: 'islands',
-        name: 'islands',
-        moduleId: PLATFORM.moduleName('views/islands'),
+        route: 'logout',
+        name: 'logout',
+        moduleId: PLATFORM.moduleName('views/logout'),
         nav: true,
-        title: 'Island'
+        title: 'Logout'
       }
+
     ]);
     this.router = router;
   }

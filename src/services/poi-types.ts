@@ -15,3 +15,10 @@ export interface Review {
   bestFor: string;
   island: Island;
 }
+
+export interface User {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+}
