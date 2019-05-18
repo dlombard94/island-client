@@ -1,15 +1,16 @@
 export interface Island {
-  name: String;
-  area: Number;
-  category: String;
-  description: String;
+  name: string;
+  area: number;
+  category: string;
+  description: string;
   // location: {
   //   longitude: Number;
   //   latitude: Number;
   // }
 }
 
-// export interface Review {
-//   review: String;
-//
-// }
+export interface Review {
+  review: string;
+  // rating: string;
+  bestFor: string;
+}

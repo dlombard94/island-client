@@ -1,5 +1,11 @@
-export class Review {
+import {Review} from "../services/poi-types"
 
-    reviews: string[] = [];
+export class Reviews {
+
+    reviews: Review[] = [];
+    // ratingOptions = ['Poor','Below Average', 'Average', 'Above Average', 'Excellent'];
+
+
+    bestForOptions = ['Poor','Below Average', 'Average', 'Above Average', 'Excellent'];
 
 }

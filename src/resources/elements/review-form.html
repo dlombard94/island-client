@@ -8,6 +8,28 @@
         <textarea placeholder="Review the island....." rows="7" value.bind="review"></textarea>
       </div>
     </div>
+
+
+
+    <div class="field">
+      <label>Rating:<br>
+        <select class="ui fluid search dropdown" value.bind="selectedBestFor">
+          <option value="">Choose..</option>
+          <option repeat.for="bestFor of bestForOptions" value.bind="bestFor">${bestFor}</option>
+        </select>
+     </label>
+    </div>
+
+      <!--<div class="field">-->
+        <!--<label>Rating:<br>-->
+          <!--<select class="ui fluid search dropdown" value.bind="selectedOption">-->
+            <!--<option value.bind="">Choose..</option>-->
+            <!--<option repeat.for="rating of ratingOptions" value.bind="rating">${rating}</option>-->
+          <!--</select>-->
+        <!--</label>-->
+      <!--</div>-->
+
+
     <button class="ui blue submit button">Submit Review</button>
   </form>
 

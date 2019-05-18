@@ -2,10 +2,10 @@ import { bindable } from 'aurelia-framework';
 import { Island } from '../../services/poi-types';
 
 export class IslandForm {
-  name: String;
-  area: Number;
-  category: String;
-  description: String;
+  name: string;
+  area: number;
+  category: string;
+  description: string;
   @bindable
   islands: Island[];
 

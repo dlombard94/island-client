@@ -1,12 +1,33 @@
 import { bindable } from 'aurelia-framework';
+import {Review} from "../../services/poi-types"
+
 
 export class ReviewForm {
   review = '';
+
   @bindable
-  reviews: string[] = [];
+  reviews: Review[] = [];
+  // @bindable
+  // ratingOptions: string[];
+
+  @bindable
+  bestForOptions: string[];
+
+
+
+  // selectedOption = '';
+
+  selectedBestFor = '';
+
 
   makeReview() {
-    this.reviews.push(this.review);
+    const review = {
+      review: this.review,
+      // rating: this.selectedOption,
+      bestFor : this.selectedBestFor
+    };
+    this.reviews.push(review);
     console.log(this.reviews);
   }
+
 }
