@@ -13,4 +13,5 @@ export interface Review {
   review: string;
   // rating: string;
   bestFor: string;
+  island: Island;
 }

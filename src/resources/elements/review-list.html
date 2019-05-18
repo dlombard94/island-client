@@ -5,12 +5,14 @@
     <table class="ui celled table segment">
       <thead>
       <tr>
+        <th>Island</th>
         <th>Rating</th>
         <th>Review</th>
       </tr>
       </thead>
       <tbody>
       <tr repeat.for="review of reviews">
+        <td> ${review.island.name}</td>
         <td> ${review.bestFor}</td>
         <td> ${review.review}</td>
       </tr>

@@ -2,14 +2,15 @@
 
   <form submit.trigger="makeReview()" class="ui form stacked segment">
     <h3 class='ui dividing header'> Write a Review </h3>
-    <div class="grouped inline fields">
-      <div class="field">
-        <label>Review</label>
-        <textarea placeholder="Review the island....." rows="7" value.bind="review"></textarea>
-      </div>
+
+    <div class="field">
+      <label>Island<br>
+        <select class="ui fluid search dropdown" value.bind="selectedIsland">
+          <option value="">Choose..</option>
+          <option repeat.for="island of islands" model.bind="island">${island.name}</option>
+        </select>
+      </label>
     </div>
-
-
 
     <div class="field">
       <label>Rating:<br>
@@ -17,7 +18,14 @@
           <option value="">Choose..</option>
           <option repeat.for="bestFor of bestForOptions" value.bind="bestFor">${bestFor}</option>
         </select>
-     </label>
+      </label>
+    </div>
+
+    <div class="grouped inline fields">
+      <div class="field">
+        <label>Review</label>
+        <textarea placeholder="Review the island....." rows="7" value.bind="review"></textarea>
+      </div>
     </div>
 
       <!--<div class="field">-->
@@ -28,7 +36,6 @@
           <!--</select>-->
         <!--</label>-->
       <!--</div>-->
-
 
     <button class="ui blue submit button">Submit Review</button>
   </form>
