@@ -30,7 +30,7 @@ export class ReviewService {
       island : island
     };
     this.reviews.push(islandReview);
-    this.total = this.total + this.reviews.length;
+    this.total = this.total + 1;
     console.log('Number of Reviews' + this.total);
   }
 
