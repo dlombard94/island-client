@@ -32,6 +32,7 @@ export class ReviewService {
   async getUsers() {
     const response = await this.httpClient.get('/api/users.json');
     const users = await response.content;
+    console.log(users);
     users.forEach(user => {
       this.users.set(user.email, user);
     });
@@ -55,7 +56,13 @@ export class ReviewService {
   }
 
   async login(email: string, password: string) {
-    this.changeRouter(PLATFORM.moduleName('app'))
+    const user = this.users.get(email);
+    if (user && (user.password === password)) {
+      this.changeRouter(PLATFORM.moduleName('app'))
+      return true;
+    } else {
+      return false;
+    }
   }
 
   logout() {
