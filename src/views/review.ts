@@ -4,13 +4,14 @@ import { ReviewService } from '../services/review-service';
 
 @inject(ReviewService)
 export class Reviews {
-
-    reviews: Review[] = [];
+    reviews: Review[];
     // ratingOptions = ['Poor','Below Average', 'Average', 'Above Average', 'Excellent'];
-    bestForOptions = ['Poor','Below Average', 'Average', 'Above Average', 'Excellent'];
+    bestForOptions: string[];
     islands: Island[];
 
   constructor(private rs: ReviewService) {
+    this.reviews = rs.reviews;
+    this.bestForOptions = rs.bestForOptions;
     this.islands = rs.islands;
   }
 

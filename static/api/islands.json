@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Island One",
+    "area": 250,
+    "category": "South",
+    "description": "A lot of mountains, no beach"
+  },
+  {
+    "name": "Island Two",
+    "area": 450,
+    "category": "North",
+    "description": "Always sunny"
+  }
+]
