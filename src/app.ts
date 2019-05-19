@@ -12,14 +12,14 @@ export class App {
         name: 'islands',
         moduleId: PLATFORM.moduleName('views/islands'),
         nav: true,
-        title: 'Island'
+        title: 'Islands'
       },
       {
         route: ['', 'review'],
         name: 'Review',
         moduleId: PLATFORM.moduleName('views/review'),
         nav: true,
-        title: 'Review'
+        title: 'Reviews'
       },
       {
         route: 'logout',

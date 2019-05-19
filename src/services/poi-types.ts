@@ -3,10 +3,13 @@ export interface Island {
   area: number;
   category: string;
   description: string;
-  // location: {
-  //   longitude: Number;
-  //   latitude: Number;
-  // }
+  addedBy: string;
+  _id: string;
+  location: {
+    longitude: number;
+    latitude: number;
+  };
+  // pictures: [];
 }
 
 export interface Review {
@@ -21,4 +24,11 @@ export interface User {
   lastName: string;
   email: string;
   password: string;
+  _id: string;
+}
+
+export interface RawReview {
+  review: string;
+  bestFor: string;
+  island: string;
 }
