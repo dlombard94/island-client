@@ -77,6 +77,7 @@ export class ReviewService {
       bestFor: bestFor,
       island : island
     };
+
     this.reviews.push(islandReview);
     this.total = this.total + 1;
     this.ea.publish(new TotalUpdate(this.total));
